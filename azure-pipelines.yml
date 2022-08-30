@@ -128,7 +128,7 @@ stages:
               command: get
               namespace: $(k8sNamespaceForPR)
               arguments: svc
-              outputFormat: jsonpath='http://{.items[0].status.loadBalancer.ingress[0].ip}:{.items[0].spec.ports[0].port}'
+              outputFormat: none
 
           # Getting the IP of the deployed service and writing it to a variable for posing comment
           - script: |
